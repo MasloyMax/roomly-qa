@@ -1,0 +1,183 @@
+{
+  "url": "https://rcsi-science.github.io/demo-roomly/",
+  "python": "3.13.17",
+  "playwright": "1.64.1",
+  "pytest": "8.3.5",
+  "pytest_playwright": "0.7.1",
+  "browser": "Chromium 156.0.8078.4",
+  "normal": {
+    "timestamp": "2026-11-23T20:36:25.175252+03:00",
+    "junit_local": "artifacts/new-regressions/junit.xml",
+    "duration_seconds_junit": 10.253,
+    "duration_seconds_console": 10.27,
+    "summary": {
+      "PASS": 6,
+      "XFAIL": 5,
+      "FAIL": 0,
+      "ERROR": 0,
+      "SKIP": 0
+    },
+    "cases": [
+      {
+        "test": "tests.test_booking::test_successful_booking[chromium]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_booking::test_invalid_booking[chromium]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_booking::test_discovered_defect[chromium]",
+        "result": "XFAIL",
+        "message": "BUG-01: форма подтверждает бронирование длительностью 29 минут"
+      },
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-angle-brackets]",
+        "result": "XFAIL",
+        "message": "BUG-04: имя интерпретируется как HTML в подтверждении"
+      },
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-html-tag]",
+        "result": "XFAIL",
+        "message": "BUG-04: имя интерпретируется как HTML в подтверждении"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-without-reload]",
+        "result": "XFAIL",
+        "message": "BUG-05: после полуночи открытая форма принимает вчерашнюю дату"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-after-reload]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-mobile-320]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-single-column-820]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-two-columns-821]",
+        "result": "XFAIL",
+        "message": "BUG-06: на ширине 821 px обрезается заголовок"
+      },
+      {
+        "test": "tests.test_smoke::test_booking_page_is_available[chromium]",
+        "result": "PASS"
+      }
+    ]
+  },
+  "diagnostic_runxfail": {
+    "timestamp": "2026-11-23T20:36:25.012194+03:00",
+    "junit_local": "artifacts/new-regressions/diagnostic/junit.xml",
+    "duration_seconds_junit": 6.776,
+    "duration_seconds_console": 6.8,
+    "summary": {
+      "PASS": 3,
+      "XFAIL": 0,
+      "FAIL": 4,
+      "ERROR": 0,
+      "SKIP": 0
+    },
+    "cases": [
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-angle-brackets]",
+        "result": "FAIL",
+        "message": "AssertionError: Имя должно отображаться как обычный текст: введено 'Анна <QA>', получено 'Бронирование создано. Малая, 2030-01-16, 10:00–10:30 · Анна'"
+      },
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-html-tag]",
+        "result": "FAIL",
+        "message": "AssertionError: Имя должно отображаться как обычный текст: введено '<b>Анна Тестова</b>', получено 'Бронирование создано. Малая, 2030-01-16, 10:00–10:30 · Анна Тестова'"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-without-reload]",
+        "result": "FAIL",
+        "message": "AssertionError: Вчерашняя дата должна быть отклонена после смены суток: Бронирование создано. Малая, 2030-01-15, 22:00–22:30 · Анна Тестова"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-after-reload]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-mobile-320]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-single-column-820]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-two-columns-821]",
+        "result": "FAIL",
+        "message": "AssertionError: Heading text is clipped at 821 px: [{'character': 'е', 'left': 265.015625, 'right': 284.078125}]"
+      }
+    ]
+  },
+  "handoff": {
+    "timestamp": "2026-11-24T10:40:24.725460+03:00",
+    "junit_local": "artifacts/handoff/junit.xml",
+    "duration_seconds_junit": 10.951,
+    "duration_seconds_console": 11.02,
+    "summary": {
+      "PASS": 6,
+      "XFAIL": 5,
+      "FAIL": 0,
+      "ERROR": 0,
+      "SKIP": 0
+    },
+    "cases": [
+      {
+        "test": "tests.test_booking::test_successful_booking[chromium]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_booking::test_invalid_booking[chromium]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_booking::test_discovered_defect[chromium]",
+        "result": "XFAIL",
+        "message": "BUG-01: форма подтверждает бронирование длительностью 29 минут"
+      },
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-angle-brackets]",
+        "result": "XFAIL",
+        "message": "BUG-04: имя интерпретируется как HTML в подтверждении"
+      },
+      {
+        "test": "tests.test_booking::test_name_is_displayed_as_text[chromium-html-tag]",
+        "result": "XFAIL",
+        "message": "BUG-04: имя интерпретируется как HTML в подтверждении"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-without-reload]",
+        "result": "XFAIL",
+        "message": "BUG-05: после полуночи открытая форма принимает вчерашнюю дату"
+      },
+      {
+        "test": "tests.test_booking::test_past_date_is_rejected_after_midnight[chromium-after-reload]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-mobile-320]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-single-column-820]",
+        "result": "PASS"
+      },
+      {
+        "test": "tests.test_layout::test_heading_is_not_clipped[chromium-two-columns-821]",
+        "result": "XFAIL",
+        "message": "BUG-06: на ширине 821 px обрезается заголовок"
+      },
+      {
+        "test": "tests.test_smoke::test_booking_page_is_available[chromium]",
+        "result": "PASS"
+      }
+    ]
+  }
+}

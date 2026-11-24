@@ -1,0 +1,3695 @@
+{
+  "url": "https://rcsi-science.github.io/demo-roomly/",
+  "date": "2026-11-23",
+  "timezone": "Europe/Moscow",
+  "browser": "156.0.8078.4",
+  "fixed_time": "2030-01-15T12:00:00+03:00",
+  "started_at": "2026-11-23T20:19:57.322548+03:00",
+  "finished_at": "2026-11-23T20:22:00.765835+03:00",
+  "source": {
+    "index.html": {
+      "status": 200,
+      "sha256": "3059e9933a139a635a1d690472584be8b13d7a47dc9db562c185ad36458af0f3",
+      "matches_local": true
+    },
+    "script.js": {
+      "status": 200,
+      "sha256": "d68329e18e4b071afa8c920221a87a0d93993c5eccc54e1acba296a87a704a8a",
+      "matches_local": true
+    },
+    "styles.css": {
+      "status": 200,
+      "sha256": "25269389c30807692d4ac3f661432fc5b1d45c8673d0e8ee24d7b7fee94edb1a",
+      "matches_local": true
+    }
+  },
+  "pairwise_missing_pairs": [],
+  "summary": {
+    "total": 124,
+    "passed": 98,
+    "failed": 15,
+    "observations": 11
+  },
+  "regression": {
+    "total": 4,
+    "passed": 3,
+    "xfailed": 1,
+    "exit_code": 0,
+    "elapsed_seconds_console": 4.04,
+    "junit_local": "artifacts/exploratory-regression/junit.xml"
+  },
+  "cases": [
+    {
+      "id": "capacity-small--1",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "-1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "-1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-0",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "0",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "0",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-1",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-2",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "2",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-3",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "3",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "3",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-4",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-5",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "5",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 4 участника."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-20",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "20",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 4 участника."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "20",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-small-21",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "21",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "21",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium--1",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "-1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "-1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-0",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "0",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "0",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-1",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-2",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "2",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-9",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "9",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "9",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-10",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "10",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "10",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-11",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "11",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 10 участника."
+        },
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "11",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-20",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "20",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 10 участника."
+        },
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "20",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-medium-21",
+      "technique": "boundary values",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "21",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "21",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large--1",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "-1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "-1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-0",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "0",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "0",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-1",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-2",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "2",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-19",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "19",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "19",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-20",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "20",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "20",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "capacity-large-21",
+      "technique": "boundary values",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "21",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "21",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration--1",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "09:59",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "endTime": "Время окончания должно быть позже начала."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "09:59",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration-0",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:00",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:00 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:00",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "evidence": "docs/evidence/extended/main-equal-time.png",
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-01"
+    },
+    {
+      "id": "duration-1",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:01",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:01 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:01",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-01"
+    },
+    {
+      "id": "duration-29",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:29",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:29 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:29",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-01"
+    },
+    {
+      "id": "duration-30",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration-31",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:31",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:31 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:31",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration-239",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "13:59",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–13:59 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "13:59",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration-240",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "14:00",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–14:00 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "14:00",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "duration-241",
+      "technique": "boundary values",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "14:01",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–14:01 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "14:01",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-01"
+    },
+    {
+      "id": "duration-1439",
+      "technique": "equivalence classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "00:00",
+        "end": "23:59",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 00:00–23:59 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "00:00",
+          "endTime": "23:59",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-01"
+    },
+    {
+      "id": "decision-000",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-001",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa.example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa.example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-010",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "5",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 4 участника."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-011",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "5",
+        "name": "Анна Тестова",
+        "email": "qa.example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "participants": "В комнате максимум 4 участника.",
+          "email": "Введите корректную рабочую почту."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Анна Тестова",
+          "email": "qa.example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-100",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-14",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-14",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-101",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-14",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa.example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом.",
+          "email": "Введите корректную рабочую почту."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-14",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa.example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-110",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-14",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "5",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом.",
+          "participants": "В комнате максимум 4 участника."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-14",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "decision-111",
+      "technique": "decision table",
+      "data": {
+        "room": "small",
+        "date": "2030-01-14",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "5",
+        "name": "Анна Тестова",
+        "email": "qa.example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом.",
+          "participants": "В комнате максимум 4 участника.",
+          "email": "Введите корректную рабочую почту."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-14",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Анна Тестова",
+          "email": "qa.example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-1",
+      "technique": "pairwise",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-2",
+      "technique": "pairwise",
+      "data": {
+        "room": "small",
+        "date": "2030-01-17",
+        "start": "10:00",
+        "end": "14:00",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "enter",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-17, 10:00–14:00 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-17",
+          "startTime": "10:00",
+          "endTime": "14:00",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-3",
+      "technique": "pairwise",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-17",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "enter",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-17, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-17",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-4",
+      "technique": "pairwise",
+      "data": {
+        "room": "medium",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "14:00",
+        "participants": "10",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nСредняя, 2030-01-16, 10:00–14:00 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "medium",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "14:00",
+          "participants": "10",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-5",
+      "technique": "pairwise",
+      "data": {
+        "room": "large",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "14:00",
+        "participants": "1",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "enter",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-16, 10:00–14:00 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "14:00",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "pairwise-6",
+      "technique": "pairwise",
+      "data": {
+        "room": "large",
+        "date": "2030-01-17",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "20",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nБольшая, 2030-01-17, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "large",
+          "date": "2030-01-17",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "20",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "date-yesterday",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-14",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-14",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "date-today-past",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-15",
+        "start": "11:59",
+        "end": "12:29",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-15, 11:59–12:29 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-15",
+          "startTime": "11:59",
+          "endTime": "12:29",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-02"
+    },
+    {
+      "id": "date-today-future",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-15",
+        "start": "12:01",
+        "end": "12:31",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-15, 12:01–12:31 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-15",
+          "startTime": "12:01",
+          "endTime": "12:31",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "date-tomorrow",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "date-leap",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2032-02-29",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2032-02-29, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2032-02-29",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "time-midnight-start",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "00:00",
+        "end": "00:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 00:00–00:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "00:00",
+          "endTime": "00:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "time-last-minute",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "23:29",
+        "end": "23:59",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 23:29–23:59 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "23:29",
+          "endTime": "23:59",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "time-cross-midnight",
+      "technique": "date/time classes",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "23:30",
+        "end": "00:00",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "endTime": "Время окончания должно быть позже начала."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "23:30",
+          "endTime": "00:00",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "keyboard-tab-space",
+      "technique": "keyboard",
+      "focus_order": [
+        "room",
+        "date",
+        "start-time",
+        "end-time",
+        "participants",
+        "name",
+        "email",
+        "BUTTON"
+      ],
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "keyboard-shift-tab",
+      "technique": "keyboard",
+      "focus_order": [
+        "email",
+        "name",
+        "participants",
+        "end-time",
+        "start-time",
+        "date",
+        "room"
+      ],
+      "passed": true,
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "midnight-stale-date",
+      "technique": "state transitions",
+      "data": {
+        "room": "small",
+        "date": "2030-01-15",
+        "start": "22:00",
+        "end": "22:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "accepted",
+      "passed": false,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-15, 22:00–22:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-15",
+          "startTime": "22:00",
+          "endTime": "22:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "initial_min": "2030-01-15",
+      "current_min": "2030-01-15",
+      "current_clock": "Wed Jan 16 2030 00:01:00 GMT+0300 (Москва, стандартное время)",
+      "evidence": "docs/evidence/extended/main-midnight-stale-date.png",
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-05"
+    },
+    {
+      "id": "midnight-after-reload",
+      "technique": "state transitions",
+      "data": {
+        "room": "small",
+        "date": "2030-01-15",
+        "start": "22:00",
+        "end": "22:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "rejected",
+      "actual": "rejected",
+      "passed": true,
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "errors": {
+          "date": "Дата не может быть в прошлом."
+        },
+        "values": {
+          "room": "small",
+          "date": "2030-01-15",
+          "startTime": "22:00",
+          "endTime": "22:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "current_min": "2030-01-16",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "timezone-Europe/Moscow",
+      "technique": "timezone classes",
+      "expected": "2030-01-16",
+      "actual": "2030-01-16",
+      "passed": true,
+      "clock": "Wed Jan 16 2030 01:30:00 GMT+0300 (Москва, стандартное время)",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "timezone-UTC",
+      "technique": "timezone classes",
+      "expected": "2030-01-15",
+      "actual": "2030-01-15",
+      "passed": true,
+      "clock": "Tue Jan 15 2030 22:30:00 GMT+0000 (Всемирное координированное время)",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "timezone-America/Los_Angeles",
+      "technique": "timezone classes",
+      "expected": "2030-01-15",
+      "actual": "2030-01-15",
+      "passed": true,
+      "clock": "Tue Jan 15 2030 14:30:00 GMT-0800 (Тихоокеанское стандартное время)",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-320",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-320",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "headingWidth": 272,
+        "headingContentWidth": 281,
+        "headingLeft": 24,
+        "headingRight": 296,
+        "panelRight": 320,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "evidence": "docs/evidence/extended/main-viewport-320.png",
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-360",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-360",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 360,
+        "documentWidth": 360,
+        "headingWidth": 312,
+        "headingContentWidth": 312,
+        "headingLeft": 24,
+        "headingRight": 336,
+        "panelRight": 360,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "evidence": "docs/evidence/extended/main-viewport-360.png",
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-375",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-375",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 375,
+        "documentWidth": 375,
+        "headingWidth": 327,
+        "headingContentWidth": 327,
+        "headingLeft": 24,
+        "headingRight": 351,
+        "panelRight": 375,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "evidence": "docs/evidence/extended/main-viewport-375.png",
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-560",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-560",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 560,
+        "documentWidth": 560,
+        "headingWidth": 430,
+        "headingContentWidth": 430,
+        "headingLeft": 24,
+        "headingRight": 454,
+        "panelRight": 560,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-561",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-561",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 561,
+        "documentWidth": 561,
+        "headingWidth": 430,
+        "headingContentWidth": 430,
+        "headingLeft": 28.046875,
+        "headingRight": 458.046875,
+        "panelRight": 561,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-768",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-768",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 768,
+        "documentWidth": 768,
+        "headingWidth": 430,
+        "headingContentWidth": 430,
+        "headingLeft": 38.390625,
+        "headingRight": 468.390625,
+        "panelRight": 768,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-820",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-820",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 820,
+        "documentWidth": 820,
+        "headingWidth": 430,
+        "headingContentWidth": 430,
+        "headingLeft": 41,
+        "headingRight": 471,
+        "panelRight": 820,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-821",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-821",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 821,
+        "documentWidth": 821,
+        "headingWidth": 198,
+        "headingContentWidth": 243,
+        "headingLeft": 41.046875,
+        "headingRight": 238.953125,
+        "panelRight": 280,
+        "heroOverflow": "hidden"
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/main-viewport-821.png",
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "FAIL",
+      "bug": "BUG-06"
+    },
+    {
+      "id": "viewport-submit-1024",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-1024",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 1024,
+        "documentWidth": 1024,
+        "headingWidth": 307,
+        "headingContentWidth": 307,
+        "headingLeft": 51.1875,
+        "headingRight": 358.40625,
+        "panelRight": 409.59375,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-submit-1350",
+      "technique": "responsive boundaries",
+      "data": {
+        "room": "small",
+        "date": "2030-01-16",
+        "start": "10:00",
+        "end": "10:30",
+        "participants": "4",
+        "name": "Анна Тестова",
+        "email": "qa@example.com"
+      },
+      "submit": "click",
+      "expected": "accepted",
+      "actual": "accepted",
+      "passed": true,
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "errors": {},
+        "values": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        }
+      },
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "viewport-layout-1350",
+      "technique": "responsive boundaries",
+      "observed": {
+        "viewport": 1350,
+        "documentWidth": 1350,
+        "headingWidth": 377,
+        "headingContentWidth": 377,
+        "headingLeft": 102.5,
+        "headingRight": 479.5,
+        "panelRight": 547,
+        "heroOverflow": "hidden"
+      },
+      "passed": true,
+      "oracle": "Text may extend into padding; it must fit within the clipping hero panel.",
+      "group": "main",
+      "result": "PASS"
+    },
+    {
+      "id": "name-empty",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "name": "Укажите имя."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "name-spaces",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "   ",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "name": "Укажите имя."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "name-nbsp",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "  ",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "name": "Укажите имя."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "name-zero-width",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · ​",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · ​",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "​",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "name-cyrillic",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "literal_name_preserved": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "name-hyphen-apostrophe",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна-Мария О'Коннор",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна-Мария О'Коннор",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна-Мария О'Коннор",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "literal_name_preserved": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "name-outer-spaces",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 ·   Анна Тестова  ",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "  Анна Тестова  ",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "name-emoji",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна 🙂",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна 🙂",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна 🙂",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "name-angle-text",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна <qa></qa>",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна <QA>",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/safe-name-angle-text.png",
+      "literal_name_preserved": false,
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-04"
+    },
+    {
+      "id": "name-html-bold",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · <b>Анна Тестова</b>",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "<b>Анна Тестова</b>",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/safe-name-html-bold.png",
+      "literal_name_preserved": false,
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-04"
+    },
+    {
+      "id": "name-length-256",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · АААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · АААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "АААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААААА",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "email-normal",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-plus",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa+roomly@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-empty",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": ""
+        },
+        "errors": {
+          "email": "Укажите рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-spaces",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": ""
+        },
+        "errors": {
+          "email": "Укажите рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-outer-spaces",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "email-inner-space",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa room@example.com"
+        },
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-double-at",
+      "expected": "rejected",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@@example.com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/safe-email-double-at.png",
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-03"
+    },
+    {
+      "id": "email-missing-at",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa.example.com"
+        },
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-missing-local",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "@example.com"
+        },
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-missing-domain",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@"
+        },
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "email-no-domain-dot",
+      "expected": null,
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example"
+        },
+        "errors": {
+          "email": "Введите корректную рабочую почту."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "email-domain-leading-hyphen",
+      "expected": "rejected",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@-example.com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/safe-email-domain-leading-hyphen.png",
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-03"
+    },
+    {
+      "id": "email-domain-trailing-hyphen",
+      "expected": "rejected",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example-.com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-03"
+    },
+    {
+      "id": "email-domain-double-dot",
+      "expected": "rejected",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example..com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "evidence": "docs/evidence/extended/safe-email-domain-double-dot.png",
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-03"
+    },
+    {
+      "id": "email-angle-local",
+      "expected": "rejected",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa<@example.com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": false,
+      "group": "input-and-states",
+      "result": "FAIL",
+      "bug": "BUG-03"
+    },
+    {
+      "id": "email-cyrillic",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "тест@example.com"
+        },
+        "errors": {},
+        "emailValidity": false,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "participants-1",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "participants-1.5",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "1.5",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": false
+      },
+      "passed": null,
+      "evidence": "docs/evidence/extended/safe-participants-1.5.png",
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "participants-3.9",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "3.9",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": false
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "participants-4",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "participants-4.1",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4.1",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "participants": "В комнате максимум 4 участника."
+        },
+        "emailValidity": true,
+        "participantsValidity": false
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "participants-0.5",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "0.5",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "participants": "Количество участников — от 1 до 20."
+        },
+        "emailValidity": true,
+        "participantsValidity": false
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "participants-2e0",
+      "expected": null,
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2e0",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "state-valid-submit",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "2",
+          "name": "Анна Тестова",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "state-edit-after-success",
+      "expected": "Open requirement: whether to hide the previous confirmation on edit",
+      "actual": "previous_confirmation_visible",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Анна Тестова",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Мария Новая",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": null,
+      "evidence": "docs/evidence/extended/safe-state-edit-after-success.png",
+      "group": "input-and-states",
+      "result": "OBSERVATION"
+    },
+    {
+      "id": "state-invalid-resubmit",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "5",
+          "name": "Мария Новая",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "participants": "В комнате максимум 4 участника."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "evidence": "docs/evidence/extended/safe-state-invalid-resubmit.png",
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "state-correct-after-error",
+      "expected": "status_cleared",
+      "actual": "status_cleared",
+      "observed": {
+        "status": "",
+        "html": "",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Мария Новая",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "state-correct-resubmit",
+      "expected": "accepted",
+      "actual": "accepted",
+      "observed": {
+        "status": "Бронирование создано.\nМалая, 2030-01-16, 10:00–10:30 · Мария Новая",
+        "html": "<strong>Бронирование создано.</strong><br>Малая, 2030-01-16, 10:00–10:30 · Мария Новая",
+        "success": true,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "Мария Новая",
+          "email": "qa@example.com"
+        },
+        "errors": {},
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    },
+    {
+      "id": "state-empty-name-enter",
+      "expected": "rejected",
+      "actual": "rejected",
+      "observed": {
+        "status": "Проверьте, пожалуйста, заполнение формы.",
+        "html": "Проверьте, пожалуйста, заполнение формы.",
+        "success": false,
+        "fields": {
+          "room": "small",
+          "date": "2030-01-16",
+          "startTime": "10:00",
+          "endTime": "10:30",
+          "participants": "4",
+          "name": "",
+          "email": "qa@example.com"
+        },
+        "errors": {
+          "name": "Укажите имя."
+        },
+        "emailValidity": true,
+        "participantsValidity": true
+      },
+      "passed": true,
+      "group": "input-and-states",
+      "result": "PASS"
+    }
+  ]
+}
